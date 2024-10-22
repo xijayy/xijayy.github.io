@@ -1,0 +1,64 @@
+main {
+    max-width: 100%;
+    width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+nav {
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(7, 59, 7, 0.5); /* Semi-transparent black */
+    backdrop-filter: blur(10px);
+    padding: 30px 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 25px;
+    width: 80%;
+    padding: 0px 15px;
+    text-align: center;
+    
+}
+
+nav li a {
+    font-family: "press start 2p";
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+nav li a::after {
+    content: '';
+    display: block;
+    height: 2px; /* Height of the underline */
+    background: #39ff14; /* Color of the underline */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position of the underline */
+    width: 0; /* Initial width */
+    transition: width 0.4s ease; /* Transition effect */
+}
+
+nav li a:hover::after {
+    width: 100%; /* Full width on hover */
+}
